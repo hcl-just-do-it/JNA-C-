@@ -26,7 +26,7 @@ bool http_post(string biz_content,string api) {
     params.insert({ "version","1.0" });
     
     params.insert({ "timestamp","1553737749174" });
-    params.insert({"sign","MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvPn+tCtyBvq42lLVjaQVyiXU1oLGu/UGN7e3uft2SNs5NHq2twPDlRhlmqmNClKThy6SBonW7eCc/l1cMYXocaKoiPzrSg0pIX6a+C0n3pPBhsRKjkIpN7QyivnWT+lkkyvl/rsPqCijPyMzCTytLTsJjVYcIIqFYHE9jGSInrhfgKMUP4oMSyIxy0Ykq34VlLP43kPHDSX07SZE30LahAfE8MmTm1W7+QEHxobZlPkYiigoGPpCC3PQavig1TR6h3Z1BhCh7B/EcdBbYsyxy8Six3kvSbLrHoACTAMITymmZCA8lhPgrsEtq1zef2lRLce2s3v2I6ctMIiLfly8nQIDAQAB"});
+    params.insert({"sign","public_key"});
     params.insert({"biz_content",biz_content});
     cout<<"start send message!"<<endl;
     if (auto res = cli.Post(api,params)) {
