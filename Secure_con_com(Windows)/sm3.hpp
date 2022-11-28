@@ -320,3 +320,23 @@ string iteration(string str) {//迭代压缩函数实现
 	}
 	return V;
 }
+
+string sm3(string str) {
+	cout << "加密之前： " + str << endl;
+	cout << endl;
+	string paddingValue = padding(str);
+	// for (int i = 0; i < paddingValue.size() / 64; i++) {
+	// 	for (int j = 0; j < 8; j++) {
+	// 		cout << paddingValue.substr(i * 64 + j * 8, 8) << "  ";
+	// 	}
+	// 	cout << endl;
+	// }
+	// cout << endl;
+	string result = iteration(paddingValue);
+	cout << "加密之后：" << endl;
+	for (int i = 0; i < 8; i++) {
+		cout << result.substr(i * 8, 8) << "  ";
+	}
+	cout << endl;
+	return result;
+}
